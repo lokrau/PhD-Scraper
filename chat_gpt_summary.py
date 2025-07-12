@@ -93,10 +93,10 @@ def send_to_gpt(formatted_data, prompt, model='gpt-4o-mini'):
             model=model,
             messages=[
                 {"role": "system", "content": "You are a helpful assistant supporting me in selecting a suitable PhD position."},
-                {"role": "user", "content": f"{prompt}\n\nThese are the PhD positions we have. Please return the ones you find relevant based on the previous description, keeping the same text format and layout. Sort them by how relevant you think they are to what I want.\n\n{formatted_data}"}
+                {"role": "user", "content": f"{prompt}\n\nThese are the PhD positions we have. Please return the ones you find relevant based on the previous description and no others, keeping the same text format and layout. Sort them by how relevant you think they are to what I want.\n\n{formatted_data}"}
             ],
             max_tokens=2000,
-            temperature=0.5
+            temperature=0.0
         )
         return response.choices[0].message.content
     except Exception as e:
