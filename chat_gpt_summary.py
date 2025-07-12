@@ -92,8 +92,8 @@ def send_to_gpt(formatted_data, prompt, model='gpt-4o-mini'):
         response = client.chat.completions.create(
             model=model,
             messages=[
-                {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": f"{prompt}\n\nThose art the PhD Positions we have, please return those to me you deem relevant given the previous description in the same text format and layout they are in right now. Please sort them by how relevant you think they are from the description of what I want:\n\n{formatted_data}"}
+                {"role": "system", "content": "You are a helpful assistant supporting me in selecting a suitable PhD position."},
+                {"role": "user", "content": f"{prompt}\n\nThese are the PhD positions we have. Please return the ones you find relevant based on the previous description, keeping the same text format and layout. Sort them by how relevant you think they are to what I want.\n\n{formatted_data}"}
             ],
             max_tokens=2000,
             temperature=0.5
