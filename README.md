@@ -25,9 +25,18 @@ This script scrapes PhD positions from the first five pages of the websites [Fel
 4. Process the data:
 
    1. Using the `chat_gpt_summary.py` script:
+
+   First add a .env file with your OpenAI API key to the project directory:
+   ```bash
+    OPENAI_API_KEY=your_api_key_here
+   ```
+
+   Then run the script:
    ```bash
     python3 chat_gpt_summary.py
    ```
+
+   Your put in your prompt in the terminal when running the script.
 
    2. Using the `data_processing.ipynb` Jupyter notebook:
 
