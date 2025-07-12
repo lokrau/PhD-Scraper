@@ -1,7 +1,8 @@
 import requests
-from bs4 import BeautifulSoup
-import pandas as pd
 import time
+import os
+import pandas as pd
+from bs4 import BeautifulSoup
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0"
@@ -134,5 +135,6 @@ def scrape_all():
 if __name__ == "__main__":
     data = scrape_all()
     df = pd.DataFrame(data)
-    df.to_csv("phd_positions.csv", index=False)
-    print("Scraping complete. Saved to phd_positions.csv")
+    os.makedirs("data", exist_ok=True)
+    df.to_csv("data/phd_positions.csv", index=False)
+    print("Scraping complete. Saved to data/phd_positions.csv")

@@ -2,6 +2,10 @@
 phd_positions.csv
 filtered_phd_positions.txt
 
+# directories
+data/
+output/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
