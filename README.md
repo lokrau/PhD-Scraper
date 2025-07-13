@@ -2,7 +2,7 @@
 ## Author: Lorenz Krause
 ## Date: 2025-07-11
 ### Description: 
-This script scrapes PhD positions from the first five pages of the websites [Fellowship Board](https://fellowshipbard.com/) and [Vacancy Edu](https://vacancyedu.com/fully-funded-phd-positions/). These positions are first saved in a CSV file. After that, there are two options to process the data:
+This script scrapes PhD positions from the first five pages of the website [Fellowship Board](https://fellowshipbard.com/). These positions are first saved in a CSV file. After that, there are two options to process the data:
 1. Use the `data_processing.ipynb` Jupyter notebook to filter and format the PhD positions based on specified keywords and countries.
 2. Use the `chat_gpt_summary.py` script to send the scraped data to OpenAI's GPT model for filtering using natural language.
 
